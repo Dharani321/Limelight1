@@ -1,0 +1,6 @@
+insert into mytable(sl_no,Name,Roll_No,branch) values('1','Dharani mahata','70','CSE'); 
+
+jooin
+
+SELECT * FROM mytable inner join bal1
+on mytable.sl_no =bal1.roll_no;

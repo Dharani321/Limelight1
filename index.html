@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limelight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="Cart.css">
+        <style>
+          .see
+{
+    text-align:center;
+    margin-left:60px;
+    background-color:skyblue;
+    color:white;
+    box-shadow:5px 5px 5px green;
+    border-radius:10px;
+    width:150px;
+    height:30px;
+}
+
+.feature
+{
+   display:flex;
+   margin-left:100px;
+}
+
+@media only screen and (max-width: 800px) {
+    .feature
+{
+   display:block;
+   margin-left:0%;
+   width: 100px;
+}
+
+.col
+{
+    margin-left:150px; 
+}
+
+/* .image
+{
+    width:1px;
+} */
+    .see
+{
+    text-align:center;
+    margin-left:30px;
+    background-color:skyblue;
+    color:white;
+    box-shadow:5px 5px 5px green;
+    border-radius:10px;
+    width:150px;
+    height:30px;
+}
+.panel
+{
+   display:flex;
+   position: absolute;
+   top:180px;
+} 
+.navbar
+{
+    /* position:relative; */
+}
+.nev-search{
+    position:absolute;
+        display:flex;
+        top:110px;
+        left:-70px;
+        /* z-index:2; */
+        width:95%;
+        background-color:transparent;
+        color:red;
+
+        /* width: 400px;
+        height: 40px;
+        margin-bottom: -3px;
+        margin-left: 45px;
+        border-radius: 20px;
+        justify-content: space-evenly; */
+    } 
+    .poster{
+        margin-top:100px;
+    }
+
+    .nev-search input
+     {
+        /* background-color:green; */
+
+     }
+     .nev-search p
+     {  
+        /* position:absolute; */
+        top: 50px;
+        /* display:inline-block; */
+
+     }
+}
+        </style>    
+</head>
+
+<body>
+                       
+
+    <div class="header">
+        <div class="navbar">
+            <img src="menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()">
+
+
+            <div class="logo box">
+                <img src="logo1.png" width="125px" alt="Limelite">
+            </div>
+            
+                   
+            <form action="product.php" method="post">
+            
+            <div class="nev-search">
+                <input placeholder="Search Limelight" name="type" class="search-input" style="text-indent:50px">
+                
+                <button  name="search" style="background-color:lime;border-radius:0px 30px 30px 0px;border:transparent;cursor:pointer">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- <p>Search</p> -->
+                </button>
+              
+            </div>
+           </form>
+
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                   
+                    <li><a href="signup.php">Account</a></li>
+                    
+                    
+                   
+                    
+                   
+                        <select style='margin-left:50px;width:100px;height:20px'>";
+                        <option></option ></select>";
+                         <option><form action='index.php' method='post'><button style='background-color:green' name='log_out'>Logout</button></form></option></select>
+
+                        <br><form action='#' method='post'><button style='background-color:green' name='log' onclick='con();'>Logout</button></form>
+                        <script>function con(){alert('Do you want to logout');} </script>";
+                        
+                       
+                    
+                    <!-- </option>
+                    </select> -->
+                    <!-- <form action='index.php' method='post'><option><button style='background-color:Red' name='log_out'>Logout</button></option></form> -->
+                    <!-- <li><i class='fa-solid fa-cart-plus'></i></li> -->
+                </ul>
+            </nav>
+
+            
+
+            <!-- <a href="Cart.html"><img src="cart.png" alt="Cart" width="30px" height="30px"></a> -->
+            <a href="Cart.html"><i class="fa-solid fa-cart-plus"></i></a>
+            
+            
+        </div>
+        <!-- <div class="nev-search2">
+            <input placeholder="    Search Limelight" class="search-input">
+            <div class="search-ico">
+                <a href="#"><button>Search</button></a>
+                <br>
+                <button style="cursor:pointer">Hi</button>
+            </div>
+        </div> -->
+        
+        <div class="panel">
+            <!-- <div class="panel-all box">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div> -->
+            <div class="panel-ops">
+                <p class="box">All</p>
+                <p class="box">Men</p>
+                <p class="box">Women</p>
+                <p class="box">Kids</p>
+                <p class="box">Home & Kitchen</p>
+                <p class="box">Beauty & Health</p>
+                <p class="box">Electronics</p>
+                <p class="box">Mobiles</p>
+                <p class="box">Books</p>
+            </div>
+        </div>
+    </div>
+    <div class="poster">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <h1><b>Give Your Workout<br>A New Style!</b></h1>
+                    <p>Success isn't always about greatness.It's about consistency. Consistent <br>hard work gains
+                        success. Greatness will come.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="image1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- from Amazon -->
+    <form action="product.php" method="post">
+    <div class="categores">
+        <div class="shop-section">
+            <div class="boxs">
+                <div class="box-contain">
+                    <h2>Beauty Picks</h2>
+                    <div class="box-img" style="background-image:url('box1_image.jpg');"></div>
+                    <button class="see" name="B_P">See more<button>
+                    <!-- <p><a href="#">See more</a></p> -->
+                </div>
+            </div>
+
+
+            <div class="boxs">
+                <div class="box-contain">
+                    <h2>Pet care</h2>
+                    <div class="box-img" style="background-image:url('box2_image.jpg');"></div>
+                    <button class="see" name="P_C">See more<button>
+                    <!-- <p><a href="#">See more</a></p> -->
+                </div>
+            </div>
+
+            <div class="boxs">
+                <div class="box-contain">
+                    <h2>New Arrivel in Toys</h2>
+                    <div class="box-img" style="background-image:url('box3_image.jpg');"></div>
+                    <button class="see" name="T">See more<button>
+                    <!-- <p><a href="#">See more</a></p> -->
+                </div>
+            </div>
+
+            <div class="boxs">
+                <div class="box-contain">
+                    <h2>Electronics</h2>
+                    <div class="box-img" style="background-image:url('box4_image.jpg');"></div>
+                    <button class="see" name="E_s">See more<button>
+                    <!-- <p><a name="E_s" href="product.php">See more</a></p> -->
+                </div>
+            </div>
+
+
+            <div class=" box5 boxs">
+                <div class="box-contain">
+                    <h2>Clothes</h2>
+                    <div class="box-img" style="background-image:url('box5_image.jpg');"></div>
+                    <!-- <p><a href="#">See more</a></p> -->
+                    <button class="see" name="C">See more<button>
+                </div>
+            </div>
+
+            <div class="box6 boxs">
+                <div class="box-contain">
+                    <h2>Health & Personal care</h2>
+                    <div class="box-img" style="background-image:url('box6_image.jpg');"></div>
+                    <button class="see" name="H&P">See more<button>
+                    <!-- <p><a href="#">See more</a></p> -->
+                </div>
+            </div>
+
+            <div class="box7 boxs">
+                <div class="box-contain">
+                    <h2>Furnitures</h2>
+                    <div class="box-img" style="background-image:url('box7_image.jpg');"></div>
+                    <button class="see" name="F">See more<button>
+                    <!-- <p><a href="#">See more</a></p> -->
+                </div>
+            </div>
+
+            <div class="box8 boxs">
+                <div class="box-contain">
+                    <h2>Discover Fasion Trends</h2>
+                    <div class="box-img" style="background-image:url('box8_image.jpg');"></div>
+                    <button class="see" name="F_T">See more<button>
+                    <!-- <p><a href="#">See more</a></p> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+    <!-- Amazon -->
+    <br>
+    <!-- featured catagores -->
+
+    <!-- <div class="categores">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="category-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- featured products -->
+
+    <!-- <div class="small-container">
+        <div class="featured-product"> -->
+            <h2 class="title">Featured Products</h2>
+            <!-- <div class="row"> -->
+                <div class="row">
+                    <div class="col-4">
+                        <img src="product-10.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+        
+                    <div class="col-4">
+                        <img src="product-6.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+        
+                    <div class="col-4">
+                        <img src="product-3.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+        
+                    <div class="col-4">
+                        <img src="product-7.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="product-5.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+        
+                    <div class="col-4">
+                        <img src="product-6.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+        
+                    <div class="col-4">
+                        <img src="product-11.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+        
+                    <div class="col-4">
+                        <img src="product-12.jpg">
+                        <h4>Red Printed T-Shirt</h4>
+                        <div class="reting">
+                            <!-- star icon -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>Rs.299.00</p>
+                    </div>
+                </div>
+            </div>
+
+    
+
+            <!-- <div class="col-4">
+                <img src="product-10.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    star icon
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-11.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                     star icon 
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-12.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                     star icon 
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+        </div> -->
+</div>
+        <br>
+    
+    </div>
+    
+   
+<br>
+</div>
+ <center>   
+<p>View More</p>
+</center>
+                <!-- <div class="col-4">
+                    <a href="Sigle-Product.html" target="_blank"><img src="product-1.jpg"></a>
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="reting">
+                        star icon 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p>Rs.299.00</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="product-2.jpg">
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="reting">
+                       star icon 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>Rs.299.00</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="product-3.jpg">
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="reting">
+                      star icon 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p>Rs.299.00</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="product-4.jpg">
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="reting">
+                       star icon
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>Rs.299.00</p>
+                </div>-->
+            <!-- </div>
+        </div> -->
+        <hr>
+        <!-- Letest Products -->
+
+        <h2 class="title">Letest Products</h2>
+     
+        <div class="row">
+            <div class="col-4">
+                <img src="product-5.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-6.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-7.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-8.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="product-9.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-10.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-11.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="product-12.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="reting">
+                    <!-- star icon -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Rs.299.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- offers -->
+
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="exclusive.png" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusive Available on Limelight</p>
+                    <h1>Smart Band 4</h1>
+                    <small>The Mi Smart Band 4 features a 39.9% larger (then Mi Band 3) AMOLED color full -touch
+                        display
+                        with adjustable brightness, so everything is clear as can be.</small><br>
+                    <a href="" class="btn">Buy Now &#8594</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Testimonial -->
+
+    <!-- Brands -->
+
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="logo-godrej.png">
+                </div>
+                <div class="col-5">
+                    <img src="logo-oppo.png">
+                </div>
+                <div class="col-5">
+                    <img src="logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="logo-philips.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="play-store.png">
+                        <img src="app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="logo1.png">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the
+                        Many</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blogs</li>
+                        <li>Return Policy</li>
+                        <li>Join Affliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instragram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024</p>
+        </div>
+    </div>
+    <!-- js for menu toggle -->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

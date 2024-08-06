@@ -1,0 +1,6 @@
+onfocus
+onfocusin
+onfocusout
+onblur
+
+https://zeenews.india.com/bengali/live-tv

@@ -1,0 +1,112 @@
+insert into Dharani(Sl_No, name, Roll, Stream) 
+values('5','Soham','2','CSE'),
+ 
+('6','Raja','3','ECE'), 
+('7','Haricharan','4','ME'),
+('8','Madhu','5','CSE'),
+('9','Rohit','6','EE'),
+('10','Rishi','7','CI'),
+('11','Palash','8','CHE');
+
+INSERT INTO Dharani(Sl_No, name, Roll, Stream) VALUES(5,'Soham','20','CSE'),(6,'Raja','30','EC');
+insert into Dharani1 SELECT * FROM Dharani where Stream='CSE';
+
+select * from Dharani1;
+
+ALTER table Dharani1 Drop column Roll;
+ALTER table Dharani1 ADD Roll number(5);
+UPDATE Dharani1 SET Roll='70' where Name='Dharani';
+
+select name from Dharani1 where Roll>=70;
+
+select name,Roll from Dharani1 order by Roll;
+select name,Roll from Dharani1 order by Roll desc;
+
+select max(Roll) from Dharani1;
+
+select name,Stream from Dharani1 where Roll=(select max(Roll) from Dharani1);
+
+
+
+create table Mahata as 
+select * from  DHARANI2;
+
+create table Mahata1 as select * from DHARANI2 where 1=10;
+or
+select * into Mahata2 FROM Dharani2;
+
+
+create table Jobs(Job_id number(5) not null PRIMARY KEY, Job_title varchar2(100) not null, min_salary number(5) not null, Max_salary number(5) not null check(Max_salary <=25000));
+
+
+
+insert into jobs(job_id,job_title,Min_salary,Max_salary) values('4','JOB1','1000','25000');
+
+
+
+//NOT Executed
+
+insert into Client_Master1(job_id,job_title,Min_salary,Max_salary) values ('1','JOB1','1000','25000'),('2','JOB1','1000','25000'),('3','JOB1','1000','25000');
+
+
+
+create table Supplier_master as select * from Client_master,
+ALTER table Supplier_master RENAME column Cli_NO to Supp_No,
+ALTER table Supplier_master RENAME column Name to S_Name;
+
+
+
+
+Delete from Client_master where Balance<100;
+
+
+update Client_master set Name='Amit',City='Medinipur' Where Cli_No='3';
+
+Alter table Client_master ADD Cli_tel number(10);
+
+select * from Client_master;
+
+
+alter table Client_master rename to Client;
+
+select * from  Client where balance between 100 and 700;
+
+select * from  Client where balance between 150 and 700;
+select * from  Supplier_master1 where S_name LIKE 'D';
+select * from  Supplier_master1 where S_name LIKE 'Dh%' and length(S_name)=3;
+
+
+38
+
+
+truncate table supplier_master1;
+select SYSDATE from dual;
+select * from dual;
+select 10+10 from dual;
+select AVG(BALANCE) from Client;
+select ABS(-100)  from dual;
+select sqrt(4) from dual;
+select SUBSTR('DHARANI',1,4) from dual;
+select ROUND(25.5258) from dual;
+select LOWER('DHA MAH') from dual;
+select UPPER('dha mah') from dual;
+select POWER(5,3) from dual;
+select INITCAP('dha mah') from dual;
+
+create table Dharani5(Sl_No number(20) not null PRIMARY KEY, Name varchar2(100) not null, Roll number(11) not null ,Price number(20) Default '100');
+insert into Dharani5(Sl_No, Name, Roll,Price) values('1','Dharani','17700122070','');
+
+ALTER TABLE Dharani5
+MODIFY Price NUMBER(20) DEFAULT '200';
+
+alter table Dharani5
+add Pri number(10) not null default 20;
+create table Dharani7(Sl_No number(20) not null , Name varchar2(100) not null, Roll number(11) not null ,Price number(20) Default '100',PRIMARY KEY(Sl_No, Name));
+ Roll number(11) not null ,Price number(20) Default '100',CONSTRAINTS Fordering_key FOREIGN KEY(Sl_No) REFERENCES Dharani8
+
+create table join1(Sl_No, Name,Stream) values('1','A','CSE');
+
+
+SELECT * FROM Join1 INNER JOIN  Join3 
+ON
+join1.Sl_No=Join3.Sl_No;

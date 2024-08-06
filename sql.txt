@@ -1,0 +1,1 @@
+create table Student(Roll_No number PRIMARY KEY, name varchar);

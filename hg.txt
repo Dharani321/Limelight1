@@ -1,0 +1,5 @@
+<!-- <a href="Cart.html"><img src="cart.png" alt="Cart" width="30px" height="30px"></a> -->
+class="fa-solid fa-magnifying-glass"
+
+
+
